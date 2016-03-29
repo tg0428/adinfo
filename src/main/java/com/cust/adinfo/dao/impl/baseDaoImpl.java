@@ -42,7 +42,6 @@ public class baseDaoImpl implements baseDao {
 		return true;
 	}
 
-
 	public boolean update(String username, String password) {
 		String sql = "update `dbo.user` set password=? where name=?";
 		try {
@@ -65,9 +64,9 @@ public class baseDaoImpl implements baseDao {
 	}
 
 	public boolean save(String username, String password, int roleId) {
-		String sql = "insert into `dbo.user` set name=?,password=?,role_id=?,contact='000000000',contactor='admin001',company_name='长春理工大学',status=2,register_time=?";
+		String sql = "insert into `dbo.user` set name=?,password=?,role_id=?,contact='000000000',contactor='admin001',company_name='山西大学',status=2,register_time=?";
 		try {
-			this.getmJdbcTemplate().update(sql, username, MD5.EncoderByMd5(password), roleId,webGetDate.getDate());
+			this.getmJdbcTemplate().update(sql, username, MD5.EncoderByMd5(password), roleId, webGetDate.getDate());
 		} catch (Exception e) {
 			e.printStackTrace();
 			return false;

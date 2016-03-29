@@ -51,4 +51,14 @@ public class managerDaoImpl extends baseDaoImpl implements managerDao {
 		}
 		return true;
 	}
+
+	public List<Map<String, Object>> get(int id) {
+		String sql = "select a.*, d.b_name, c.* from `dbo.user` as a left join `dbo.status` as b on a.status = b.status_id LEFT JOIN `dbo.user_link_book` as c on a.id = c.u_id LEFT JOIN `dbo.book` as d on c.b_id = d.b_id where a.id =  ?";
+		try {
+			return this.getmJdbcTemplate().queryForList(sql, id);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return null;
+	}
 }

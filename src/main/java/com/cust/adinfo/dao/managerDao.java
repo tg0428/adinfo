@@ -5,19 +5,33 @@ import java.util.Map;
 
 public interface managerDao extends baseDao {
 
-	/** 获取对应角色，对应状态的注册用户列表
+	/**
+	 * 获取对应角色，对应状态的注册用户列表
+	 * 
 	 * @param roleId
 	 * @return
 	 */
-	public List<Map<String, Object>> get(int roleId,int status);
-	
-	/** 获取对应角色的相应dir
+	public List<Map<String, Object>> get(int roleId, int status);
+
+	/**
+	 * 获取特定用户信息
+	 * 
+	 * @param id
+	 * @return
+	 */
+	public List<Map<String, Object>> get(int id);
+
+	/**
+	 * 获取对应角色的相应dir
+	 * 
 	 * @param roleId
 	 * @return
 	 */
-	public List<Map<String,Object>> getDir(int roleId);
-	
-	/** 更新用户状态
+	public List<Map<String, Object>> getDir(int roleId);
+
+	/**
+	 * 更新用户状态
+	 * 
 	 * @param id
 	 *            : 用户id
 	 * @param operator
@@ -26,9 +40,10 @@ public interface managerDao extends baseDao {
 	 *            : 审核状态
 	 */
 	public boolean updateUser(int id, int operator, int status);
-	
-	
-	/** 更新广告状态
+
+	/**
+	 * 更新广告状态
+	 * 
 	 * @param id
 	 *            : 用户id
 	 * @param operator

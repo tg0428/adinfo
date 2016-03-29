@@ -16,7 +16,7 @@ public class userDaoImpl extends baseDaoImpl implements userDao {
 	public boolean delete(int id) {
 		String sql = "delete from `dbo.user` where id=?";
 		try {
-			this.getmJdbcTemplate().update(sql,id);
+			this.getmJdbcTemplate().update(sql, id);
 		} catch (DataAccessException e) {
 			e.printStackTrace();
 			return false;
@@ -37,7 +37,7 @@ public class userDaoImpl extends baseDaoImpl implements userDao {
 	public boolean reset(int id) {
 		String sql = "update `dbo.user` set password=? where id=?";
 		try {
-			this.getmJdbcTemplate().update(sql, MD5.EncoderByMd5("000000"),id);
+			this.getmJdbcTemplate().update(sql, MD5.EncoderByMd5("000000"), id);
 		} catch (DataAccessException e) {
 			e.printStackTrace();
 		} catch (NoSuchAlgorithmException e) {

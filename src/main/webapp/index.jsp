@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>广告发布与管理系统</title>
+<title>山西大学图书借阅管理系统 </title>
 <link rel="stylesheet" href="resources/bootstrap/css/bootstrap.min.css">	
 <link rel="stylesheet" href="resources/css/index.css">
 <link rel="stylesheet" href="resources/css/bootstrapValidator.css">
@@ -33,14 +33,14 @@ $(function(){
 		}
 	
 	Messenger().post({
-	  message: '欢迎使用广告发布与管理系统 ^-^',
+	  message: '欢迎使用山西大学图书借阅管理系统 ^-^',
 	  type: 'info',
 	});
 })
 	function showAbout(){
 		bootbox.dialog({
 		    title : "关于系统",
-		    message : "<span><i class='icon-envelope'></i>&nbsp;本系统为广告发布与管理系统，诣在简化广告发布与管理操作流程</span></br>"+
+		    message : "<span><i class='icon-envelope'></i>&nbsp;本系统为山西大学图书借阅管理系统 ，诣在简化山西大学图书借阅管理的操作流程</span></br>"+
 		    		  "<span><i class='icon-tags'></i>&nbsp;使用中常见的问题</span></br>"+
 		    		  "<span style='display:block;padding-left:15px;padding-top:5px'>1. 忘记密码：可联系管理员，申请重置密码(密码重置后为：000000)</span></br>"+
 		    		  "<span style='display:block;padding-left:15px'>2. 用户不能登陆：新注册的用户需等待管理员审核通过后方可登录</span></br>"+
@@ -61,7 +61,7 @@ $(function(){
 	<div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
-          <a class="brand" href="javascript:showAbout()">广告发布与管理系统</a>
+          <a class="brand" href="javascript:showAbout()">山西大学图书借阅管理系统 </a>
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li class="active"><a href="#">主页</a></li>
@@ -168,7 +168,7 @@ $(function(){
 	        		</div>
 	        		<div class="form-group">
 	                    <div class="col-lg-5">
-	        				<input type="text" class="form-control" name="companyName" placeholder="公司名称*">
+	        				<input type="text" class="form-control" name="companyName" placeholder="所属学院*">
 	        			</div>
 	        		</div>
 	        		<div class="form-group">
@@ -204,7 +204,7 @@ $(function(){
 </div>
     <div id="footer">
       <div class="container">
-        <p class="muted credit">@CopyRight&nbsp;&nbsp;长春理工大学科研训练</p>
+        <p class="muted credit">@CopyRight&nbsp;&nbsp;山西大学软件工程毕业设计 </p>
       </div>
     </div>
 </body>

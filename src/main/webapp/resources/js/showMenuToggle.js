@@ -1,3 +1,0 @@
-function showToggle(){
-	alert("show");
-}

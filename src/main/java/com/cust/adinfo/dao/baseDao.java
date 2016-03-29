@@ -7,7 +7,9 @@ import java.util.Map;
  */
 public interface baseDao {
 
-	/**企业注册的save方法
+	/**
+	 * 企业注册的save方法
+	 * 
 	 * @param username
 	 *            : 用户名
 	 * @param password
@@ -20,9 +22,12 @@ public interface baseDao {
 	 *            : 角色id
 	 * @return
 	 */
-	public boolean save(String username, String password, String companyName, String contactor, String contact, int roleId, String register_time);
-	
-	/**管理员添加辅助用户的save方法
+	public boolean save(String username, String password, String companyName, String contactor, String contact,
+			int roleId, String register_time);
+
+	/**
+	 * 管理员添加辅助用户的save方法
+	 * 
 	 * @param username:用户名
 	 * @param password:密码
 	 * @param roleId:角色id
@@ -38,11 +43,11 @@ public interface baseDao {
 	 */
 	public boolean update(String username, String password);
 
-
 	/**
-	 * @param username	: 用户名
+	 * @param username
+	 *            : 用户名
 	 * @return
 	 */
 	public Map<String, ?> get(String username);
-	
+
 }

@@ -13,14 +13,14 @@ public class MD5 {
 	 * 
 	 * @author guoyidong
 	 * @title: EncoderByMd5
-	 * @param str 要加密的字符串
+	 * @param str
+	 *            要加密的字符串
 	 * @return 加密后的md5字符串
 	 * @throws NoSuchAlgorithmException
 	 * @throws UnsupportedEncodingException
 	 *             String
 	 */
-	public static String EncoderByMd5(String str)
-			throws NoSuchAlgorithmException, UnsupportedEncodingException {
+	public static String EncoderByMd5(String str) throws NoSuchAlgorithmException, UnsupportedEncodingException {
 
 		MessageDigest md5 = MessageDigest.getInstance("MD5");
 		BASE64Encoder base64en = new BASE64Encoder();
@@ -28,14 +28,16 @@ public class MD5 {
 		String newstr = base64en.encode(md5.digest(str.getBytes("utf-8")));
 		return newstr;
 	}
-	
+
 	/**
 	 * 比对密码是否一致
 	 * 
 	 * @author guoyidong
 	 * @title: checkpassword
-	 * @param inputPasswd 用户输入的密码
-	 * @param dataPasswd 数据库中用MD5加密过的密码
+	 * @param inputPasswd
+	 *            用户输入的密码
+	 * @param dataPasswd
+	 *            数据库中用MD5加密过的密码
 	 * @return true:两个密码一样， false:两个密码不一样
 	 */
 	public static boolean checkpassword(String inputPasswd, String dataPasswd) {

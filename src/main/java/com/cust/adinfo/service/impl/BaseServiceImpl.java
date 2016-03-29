@@ -14,12 +14,12 @@ import com.cust.adinfo.service.BaseService;
 public class BaseServiceImpl implements BaseService {
 
 	private baseDao mBaseDao;
-	
-	@Resource(name="baseDaoImpl")  
+
+	@Resource(name = "baseDaoImpl")
 	public void setmBaseDao(baseDao mBaseDao) {
 		this.mBaseDao = mBaseDao;
 	}
-	
+
 	public Map<String, ?> GetUser(User user) {
 		return mBaseDao.get(user.getUsername());
 	}

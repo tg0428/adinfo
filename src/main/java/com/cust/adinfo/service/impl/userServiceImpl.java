@@ -24,7 +24,7 @@ public class userServiceImpl extends BaseServiceImpl implements userService {
 
 	private static Logger log = LoggerFactory.getLogger(userServiceImpl.class);
 
-	@Resource(name="userDaoImpl")
+	@Resource(name = "userDaoImpl")
 	public void setmUserDao(userDao mUserDao) {
 		this.mUserDao = mUserDao;
 	}
@@ -69,8 +69,8 @@ public class userServiceImpl extends BaseServiceImpl implements userService {
 		return true;
 	}
 
-	public boolean UpdateUserPassword(String oldPassword, String  password, String username) {
-		if (checkUpdatePassword(oldPassword, username)){
+	public boolean UpdateUserPassword(String oldPassword, String password, String username) {
+		if (checkUpdatePassword(oldPassword, username)) {
 			try {
 				return mUserDao.update(username, MD5.EncoderByMd5(password));
 			} catch (NoSuchAlgorithmException e) {
@@ -92,10 +92,10 @@ public class userServiceImpl extends BaseServiceImpl implements userService {
 			return false;
 		}
 	}
-	
-	public boolean checkUpdatePassword(String oldPassword, String username){
+
+	public boolean checkUpdatePassword(String oldPassword, String username) {
 		Map<?, ?> map = mUserDao.get(username);
-		if (MD5.checkpassword(oldPassword,(String)map.get("password"))){
+		if (MD5.checkpassword(oldPassword, (String) map.get("password"))) {
 			return true;
 		} else {
 			return false;
